@@ -1,42 +1,96 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from 'react';
+import jump from 'jump.js';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
+import './header.scss';
+
+import Icon from '../components/Icon';
+
+const Header = () => {
+  const [mobileMenuisOpen, setMobileMenuisOpen] = useState(false);
+
+  const jumpTo = element => {
+    jump(element, {
+      duration: 180,
+      offset: -80,
+    });
+  };
+
+  const menu = (
+    <React.Fragment>
+      <a
+        className="menu-link"
+        href="#about-me"
+        onClick={() => {
+          setMobileMenuisOpen(false);
+          jumpTo('#about-me');
+        }}
+      >
+        ABOUT ME
+      </a>
+      <a
+        className="menu-link"
+        href="#skills"
+        onClick={() => {
+          setMobileMenuisOpen(false);
+          jumpTo('#skills');
+        }}
+      >
+        SKILLS
+      </a>
+      <a
+        className="menu-link"
+        href="#experience"
+        onClick={() => {
+          setMobileMenuisOpen(false);
+          jumpTo('#experience');
+        }}
+      >
+        EXPERIENCE
+      </a>
+      <a
+        className="menu-link"
+        href="#contact-me"
+        onClick={() => {
+          setMobileMenuisOpen(false);
+          jumpTo('#contact-me');
+        }}
+      >
+        CONTACT ME
+      </a>
+    </React.Fragment>
+  );
+
+  return (
+    <React.Fragment>
+      <header className="header">
+        <div className="title">
+          <a href="/" style={{ color: `white`, textDecoration: `none` }}>
+            ALLAN
+            <br />
+            GALERA
+          </a>
+        </div>
+        <div className="desktop-menu">{menu}</div>
+        <div className="desktop-social-links">
+          <a href="https://www.linkedin.com/in/allangalera/" target="_blank" rel="noopener noreferrer">
+            <Icon icon="linkedin" />
+          </a>
+          <a href="https://github.com/allangalera" target="_blank" rel="noopener noreferrer">
+            <Icon icon="github" />
+          </a>
+        </div>
+        <div
+          className="menu-btn"
+          onClick={() => {
+            setMobileMenuisOpen(!mobileMenuisOpen);
           }}
         >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+          {mobileMenuisOpen ? <Icon icon="times" /> : <Icon icon="bars" />}
+        </div>
+      </header>
+      <div className={`mobile-menu${mobileMenuisOpen ? ' open' : ''}`}>{menu}</div>
+    </React.Fragment>
+  );
+};
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Header;

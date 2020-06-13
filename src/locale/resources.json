@@ -1,0 +1,98 @@
+{
+  "pt-br": {
+    "banner": {
+      "title": ["FULL STACK", "WEB DEVELOPER"],
+      "callToAction": "ENTRE EM CONTATO"
+    },
+    "aboutMe": {
+      "title": "ABOUT ME",
+      "content": [
+        "Hi! I’m passionate about technology and work as a Web Developer since 2016. I always reading news in the programming world and keep a few personal projects.",
+        "I'm from Rio de Janeiro - Brazil and moved to Sao Paulo on July 2019 to work."
+      ]
+    },
+    "skills": {
+      "title": "SKILLS"
+    },
+    "experience": {
+      "title": "EXPERIENCE",
+      "list": [
+        {
+          "title": "Desenvolvedor Front End",
+          "start": "2019-07",
+          "end": null,
+          "company": "Cognizant",
+          "location": "Sao Paulo, Brasil",
+          "description": "On the first project I worked on a e-commerce using VTEX, angular 7 and 8, Vuejs and sass. On the second project I am currently working with React Native."
+        },
+        {
+          "title": "Desenvolvedor Full Stack",
+          "start": "2019-02",
+          "end": "2019-07",
+          "company": "TUUT",
+          "location": "Rio de Janeiro, Brasil",
+          "description": "Built websites with Wordpress and managed servers."
+        },
+        {
+          "title": "Desenvolvedor Full Stack",
+          "start": "2016-10",
+          "end": "2019-01",
+          "company": "Pulcher Studio",
+          "location": "Rio de Janeiro, Brasil",
+          "description": "Built websites with wordpress and Laravel, Built an app with React Native and managed servers."
+        }
+      ]
+    },
+    "contact": {
+      "title": "CONTACT ME"
+    }
+  },
+  "en": {
+    "banner": {
+      "title": ["FULL STACK", "WEB DEVELOPER"],
+      "callToAction": "GET IN TOUCH"
+    },
+    "aboutMe": {
+      "title": "ABOUT ME",
+      "content": [
+        "Hi! I’m passionate about technology and work as a Web Developer since 2016. I always reading news in the programming world and keep a few personal projects.",
+        "I'm from Rio de Janeiro - Brazil and moved to Sao Paulo on July 2019 to work."
+      ]
+    },
+    "skills": {
+      "title": "SKILLS"
+    },
+    "experience": {
+      "title": "EXPERIENCE",
+      "list": [
+        {
+          "title": "Front End Developer",
+          "start": "2019-07",
+          "end": null,
+          "company": "Cognizant",
+          "location": "Sao Paulo, Brazil",
+          "description": "On the first project I worked on a e-commerce using VTEX, angular 7 and 8, Vuejs and sass. On the second project I am currently working with React Native."
+        },
+        {
+          "title": "Full Stack Developer",
+          "start": "2019-02",
+          "end": "2019-07",
+          "company": "TUUT",
+          "location": "Rio de Janeiro, Brazil",
+          "description": "Built websites with Wordpress and managed servers."
+        },
+        {
+          "title": "Full Stack Developer",
+          "start": "2016-10",
+          "end": "2019-01",
+          "company": "Pulcher Studio",
+          "location": "Rio de Janeiro, Brazil",
+          "description": "Built websites with wordpress and Laravel, Built an app with React Native and managed servers."
+        }
+      ]
+    },
+    "contact": {
+      "title": "CONTACT ME"
+    }
+  }
+}

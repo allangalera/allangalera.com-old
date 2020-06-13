@@ -1,0 +1,105 @@
+.skill-list {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+
+  .skill-list-container {
+    padding: 0;
+
+    .skill {
+      display: grid;
+      grid-template-columns: 1fr 2fr 0.6fr;
+      padding: 8px 0;
+
+      .skill-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .skill-level-bar {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .skill-default-level {
+          width: 100%;
+        }
+
+        .skill-current-level {
+          width: 100%;
+          position: absolute;
+        }
+      }
+
+      .skill-level {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .skill-background {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.6fr;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    .skill-legend {
+      grid-column-start: 2;
+      display: flex;
+      justify-content: space-between;
+
+      .skill-legend-level {
+        position: relative;
+        background: #c1c1c1;
+        width: 1px;
+
+        span {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #e1e1e1;
+          font-size: 10px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .skill-background {
+      grid-template-columns: 1fr 4fr 1fr;
+
+      .skill-legend {
+        .skill-legend-level {
+          span {
+            display: block;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .skill-list-container {
+      padding: 64px 0 16px;
+
+      .skill {
+        grid-template-columns: 1fr 4fr 1fr;
+        padding: 16px 0;
+      }
+    }
+  }
+}
