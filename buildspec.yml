@@ -20,6 +20,8 @@ phases:
     commands:
       - yarn run build
 
-cache:
-  paths:
-    - './node_modules/**/*'
+artifacts:
+  files:
+    - '**/*'
+  discard_paths: no
+  base-directory: public
