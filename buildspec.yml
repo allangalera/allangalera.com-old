@@ -1,0 +1,27 @@
+version: 0.2
+
+env:
+  variables:
+    NODE_ENV: 'production'
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - 'touch .npmignore'
+      - 'yarn global add gatsby'
+
+  pre_build:
+    commands:
+      - 'yarn install --frozen-lockfile --production'
+
+  build:
+    commands:
+      - yarn run build
+
+artifacts:
+  files:
+    - '**/*'
+  discard_paths: no
+  base-directory: public
