@@ -9,10 +9,10 @@ import { enUS } from 'date-fns/locale';
 const ExperienceList = ({ experienceList }) => {
   const experienceListElement = experienceList.map(experience => {
     const startArray = experience.start.split('-');
-    const endArray = experience.end ? experience.end.split('-') : null;
+    const expStart = new Date(parseInt(startArray[0]), parseInt(startArray[1]) - 1, 1);
 
-    const expStart = new Date(Date.UTC(startArray[0], startArray[1]));
-    const expEnd = experience.end ? new Date(Date.UTC(endArray[0], endArray[1])) : null;
+    const endArray = experience.end ? experience.end.split('-') : null;
+    const expEnd = experience.end ? new Date(parseInt(endArray[0]), parseInt(endArray[1]) - 1, 1) : null;
 
     const from = format(expStart, 'MMM yyyy', { locale: enUS });
     const fromCapitalized = from.charAt(0).toUpperCase() + from.slice(1);
@@ -27,7 +27,7 @@ const ExperienceList = ({ experienceList }) => {
 
     let diffRemain = subYears(end, calcYears);
 
-    const calcMonths = differenceInMonths(diffRemain, expEnd);
+    const calcMonths = differenceInMonths(diffRemain, expStart);
 
     let diffInWords = `${calcMonths} month${calcMonths > 0 ? 's' : ''}`;
 
