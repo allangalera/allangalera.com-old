@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 
 import Layout from '../components/layout';
 import Ruler from '../components/ruler';
-import Button from '../components/Button';
+import Button from '../components/Button/Button';
 import Section from '../components/Section';
 import Icon from '../components/Icon';
 import SkillList from '../components/SkillList';

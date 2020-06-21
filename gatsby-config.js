@@ -38,5 +38,6 @@ module.exports = {
         trackingId: 'UA-100560151-1',
       },
     },
+    `gatsby-plugin-emotion`,
   ],
 };
